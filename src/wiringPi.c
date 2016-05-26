@@ -38,15 +38,13 @@ void pinMode(int pin, int mode){
 
 int digitalRead(int pin){
 	
-	char resp;
-	printf("Is the pin on (y/n)");
-	resp = getchar();
-	
-	// do this to generate both time of states
-	if(resp=='y')
+
+	if((float)rand()/RAND_MAX > 0.5){
 		pin = 1;
-	else
+	}
+	else{
 		pin = 0;
+	}
 	
 	return pin;
 }
