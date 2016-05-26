@@ -20,28 +20,34 @@ int wiringPiSetup(void){
 }
 
 void pwmWrite(int pin, int value){
-	//printf("set pwm pin:%i, value to:%i\n",pin, value);
 	pin = value;
 	pin += 10;
 }
 
 void digitalWrite(int pin, int value){
-	//printf("set pin:%i, value to:%i\n",pin, value);
 	pin = value;
 	pin += 10;
 }
 
 
 void pinMode(int pin, int mode){
-	//printf("set pin:%i, mode to:%i\n",pin, mode);
 	pin = mode;
 	pin += 10;
 }
 
 
 int digitalRead(int pin){
-	//printf("reading pin:%i, state\n",pin);
-	pin = 0;
+	
+	char resp;
+	printf("Is the pin on (y/n)");
+	scanf("%c",&resp);
+	
+	// do this to generate both time of states
+	if(resp=='y')
+		pin = 1;
+	else
+		pin = 0;
+	
 	return pin;
 }
 
