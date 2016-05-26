@@ -40,7 +40,7 @@ int digitalRead(int pin){
 	
 	char resp;
 	printf("Is the pin on (y/n)");
-	scanf("%c",&resp);
+	resp = getchar();
 	
 	// do this to generate both time of states
 	if(resp=='y')
